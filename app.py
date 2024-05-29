@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from collections import defaultdict
 from datetime import datetime
 
-app = Flask(__name__, template_folder='inventory_management/templates', static_folder='inventory_management/static')
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///inventory.db'
 db = SQLAlchemy(app)
 

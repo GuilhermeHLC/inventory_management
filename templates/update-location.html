@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Atualizar Localização</title>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/locations/">Localização</a></li>
+            <li class="breadcrumb-item active">Atualizar Localização</li>
+        </ol>
+        <div class="card mb-4">
+
+            <div class="card-header">Atualizar Localização</div>
+            <div class="card-body">
+                <form action="/update-location/{{location.location_id}}" method="POST" id="location_form">
+                    <label for="location_name" class="col-form-label">Nome da Localização</label>
+                    <input type="text" name="location_name" id="location_name" value="{{location.location_id}}">
+                    <input id="submitLocation" value="Atualizar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
